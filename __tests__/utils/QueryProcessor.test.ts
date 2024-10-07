@@ -17,4 +17,10 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test('should return Andrew ID when query contains "What is your Andrew ID?"', () => {
+        const query = "What is your Andrew ID?";
+        const response = QueryProcessor(query);
+        expect(response).toBe("My Andrew ID is: tinchil@andrew.cmu.edu");
+      });
 });
